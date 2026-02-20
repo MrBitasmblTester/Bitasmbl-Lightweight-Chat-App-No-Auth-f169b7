@@ -1,0 +1,1 @@
+module.exports=io=>{io.on('connection',socket=>{socket.on('join-room',room=>{socket.join(room);});socket.on('chat-message',p=>{io.to(p.room).emit('chat-message',p);});});};
