@@ -1,0 +1,11 @@
+<section class="chat-room">
+  <ul>
+    {{#each this.messages as |m|}}
+      <li>{{m.timestamp}} [{{m.userId}}]: {{m.body}}</li>
+    {{/each}}
+  </ul>
+  <form {{on "submit" this.onSubmit}}>
+    <input type="text" />
+    <button type="submit">Send</button>
+  </form>
+</section>
